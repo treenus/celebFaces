@@ -1,0 +1,17 @@
+# Core
+numpy
+scikit-learn
+matplotlib
+seaborn
+tqdm
+
+# Deep learning
+torch
+torchvision
+
+# Face detection (YOLOv3-tiny via OpenCV DNN)
+# OpenCV 5.x removed the Darknet importer (readNetFromDarknet) -> pin to 4.x
+opencv-python>=4.8,<5
+
+# Image handling
+Pillow
