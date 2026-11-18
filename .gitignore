@@ -1,1 +1,7 @@
 planning.md
+.venv/
+data/faces/
+results/checkpoints/
+__pycache__/
+*.pyc
+.DS_Store
