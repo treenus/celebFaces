@@ -1,0 +1,1180 @@
+{
+  "mean_fold_acc": 0.9570588111877442,
+  "pooled_acc": 0.9570588235294117,
+  "fold_accs": [
+    0.9529411792755127,
+    0.9647058844566345,
+    0.9588235020637512,
+    0.9470587968826294,
+    0.9470587968826294,
+    0.9764705896377563,
+    0.9470587968826294,
+    0.9764705896377563,
+    0.9529411792755127,
+    0.9470587968826294
+  ],
+  "identities": [
+    "Angelina Jolie",
+    "Brad Pitt",
+    "Denzel Washington",
+    "Hugh Jackman",
+    "Jennifer Lawrence",
+    "Johnny Depp",
+    "Kate Winslet",
+    "Leonardo DiCaprio",
+    "Megan Fox",
+    "Natalie Portman",
+    "Nicole Kidman",
+    "Robert Downey Jr",
+    "Sandra Bullock",
+    "Scarlett Johansson",
+    "Tom Cruise",
+    "Tom Hanks",
+    "Will Smith"
+  ],
+  "confusion_matrix": [
+    [
+      97,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      2,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      94,
+      0,
+      0,
+      0,
+      3,
+      0,
+      0,
+      0,
+      0,
+      1,
+      1,
+      0,
+      0,
+      0,
+      0,
+      1
+    ],
+    [
+      0,
+      0,
+      95,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      2,
+      2
+    ],
+    [
+      0,
+      0,
+      2,
+      98,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      95,
+      0,
+      1,
+      0,
+      1,
+      1,
+      1,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      2,
+      0,
+      0,
+      1,
+      95,
+      0,
+      1,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      93,
+      0,
+      0,
+      1,
+      0,
+      0,
+      2,
+      2,
+      0,
+      0,
+      1
+    ],
+    [
+      0,
+      0,
+      0,
+      2,
+      0,
+      0,
+      1,
+      96,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      96,
+      0,
+      1,
+      0,
+      2,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      95,
+      1,
+      0,
+      0,
+      2,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      99,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      1,
+      0,
+      1,
+      0,
+      2,
+      0,
+      1,
+      0,
+      0,
+      0,
+      92,
+      0,
+      0,
+      1,
+      1,
+      1
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      99,
+      1,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      2,
+      0,
+      0,
+      2,
+      1,
+      0,
+      1,
+      94,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      99,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      1,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      2,
+      0,
+      0,
+      0,
+      96,
+      0
+    ],
+    [
+      0,
+      1,
+      3,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      94
+    ]
+  ],
+  "analysis": {
+    "per_identity": {
+      "Angelina Jolie": {
+        "recall": 0.97,
+        "errors": 3
+      },
+      "Brad Pitt": {
+        "recall": 0.94,
+        "errors": 6
+      },
+      "Denzel Washington": {
+        "recall": 0.95,
+        "errors": 5
+      },
+      "Hugh Jackman": {
+        "recall": 0.98,
+        "errors": 2
+      },
+      "Jennifer Lawrence": {
+        "recall": 0.95,
+        "errors": 5
+      },
+      "Johnny Depp": {
+        "recall": 0.95,
+        "errors": 5
+      },
+      "Kate Winslet": {
+        "recall": 0.93,
+        "errors": 7
+      },
+      "Leonardo DiCaprio": {
+        "recall": 0.96,
+        "errors": 4
+      },
+      "Megan Fox": {
+        "recall": 0.96,
+        "errors": 4
+      },
+      "Natalie Portman": {
+        "recall": 0.95,
+        "errors": 5
+      },
+      "Nicole Kidman": {
+        "recall": 0.99,
+        "errors": 1
+      },
+      "Robert Downey Jr": {
+        "recall": 0.92,
+        "errors": 8
+      },
+      "Sandra Bullock": {
+        "recall": 0.99,
+        "errors": 1
+      },
+      "Scarlett Johansson": {
+        "recall": 0.94,
+        "errors": 6
+      },
+      "Tom Cruise": {
+        "recall": 0.99,
+        "errors": 1
+      },
+      "Tom Hanks": {
+        "recall": 0.96,
+        "errors": 4
+      },
+      "Will Smith": {
+        "recall": 0.94,
+        "errors": 6
+      }
+    },
+    "top_confused_pairs": [
+      {
+        "true": "Brad Pitt",
+        "pred": "Johnny Depp",
+        "count": 3
+      },
+      {
+        "true": "Will Smith",
+        "pred": "Denzel Washington",
+        "count": 3
+      },
+      {
+        "true": "Angelina Jolie",
+        "pred": "Natalie Portman",
+        "count": 2
+      },
+      {
+        "true": "Denzel Washington",
+        "pred": "Tom Hanks",
+        "count": 2
+      },
+      {
+        "true": "Denzel Washington",
+        "pred": "Will Smith",
+        "count": 2
+      },
+      {
+        "true": "Hugh Jackman",
+        "pred": "Denzel Washington",
+        "count": 2
+      },
+      {
+        "true": "Johnny Depp",
+        "pred": "Brad Pitt",
+        "count": 2
+      },
+      {
+        "true": "Kate Winslet",
+        "pred": "Sandra Bullock",
+        "count": 2
+      },
+      {
+        "true": "Kate Winslet",
+        "pred": "Scarlett Johansson",
+        "count": 2
+      },
+      {
+        "true": "Leonardo DiCaprio",
+        "pred": "Hugh Jackman",
+        "count": 2
+      },
+      {
+        "true": "Megan Fox",
+        "pred": "Sandra Bullock",
+        "count": 2
+      },
+      {
+        "true": "Natalie Portman",
+        "pred": "Scarlett Johansson",
+        "count": 2
+      },
+      {
+        "true": "Robert Downey Jr",
+        "pred": "Johnny Depp",
+        "count": 2
+      },
+      {
+        "true": "Scarlett Johansson",
+        "pred": "Kate Winslet",
+        "count": 2
+      },
+      {
+        "true": "Scarlett Johansson",
+        "pred": "Natalie Portman",
+        "count": 2
+      }
+    ],
+    "detection_buckets": {
+      "cached": {
+        "total": 1604,
+        "errors": 52,
+        "error_rate": 0.032418952618453865
+      },
+      "yunet": {
+        "total": 96,
+        "errors": 21,
+        "error_rate": 0.21875
+      }
+    }
+  },
+  "errors": [
+    {
+      "identity": "Brad Pitt",
+      "filename": "028_181cbb8a.jpg",
+      "fold": 0,
+      "true": 1,
+      "pred": 10,
+      "correct": false,
+      "source": "crop"
+    },
+    {
+      "identity": "Leonardo DiCaprio",
+      "filename": "079_6ec91919.jpg",
+      "fold": 0,
+      "true": 7,
+      "pred": 6,
+      "correct": false,
+      "source": "crop"
+    },
+    {
+      "identity": "Megan Fox",
+      "filename": "023_55dd20e3.jpg",
+      "fold": 0,
+      "true": 8,
+      "pred": 5,
+      "correct": false,
+      "source": "crop"
+    },
+    {
+      "identity": "Natalie Portman",
+      "filename": "049_f7490e79.jpg",
+      "fold": 0,
+      "true": 9,
+      "pred": 10,
+      "correct": false,
+      "source": "crop"
+    },
+    {
+      "identity": "Robert Downey Jr",
+      "filename": "093_8bbca2a0.jpg",
+      "fold": 0,
+      "true": 11,
+      "pred": 16,
+      "correct": false,
+      "source": "crop"
+    },
+    {
+      "identity": "Scarlett Johansson",
+      "filename": "004_bb16ac65.jpg",
+      "fold": 0,
+      "true": 13,
+      "pred": 6,
+      "correct": false,
+      "source": "crop"
+    },
+    {
+      "identity": "Scarlett Johansson",
+      "filename": "077_776d5e0f.jpg",
+      "fold": 0,
+      "true": 13,
+      "pred": 10,
+      "correct": false,
+      "source": "crop"
+    },
+    {
+      "identity": "Will Smith",
+      "filename": "067_9e09ea61.jpg",
+      "fold": 0,
+      "true": 16,
+      "pred": 2,
+      "correct": false,
+      "source": "crop"
+    },
+    {
+      "identity": "Brad Pitt",
+      "filename": "060_136e5ef5.jpg",
+      "fold": 1,
+      "true": 1,
+      "pred": 5,
+      "correct": false,
+      "source": "crop"
+    },
+    {
+      "identity": "Jennifer Lawrence",
+      "filename": "095_0ccffcb8.jpg",
+      "fold": 1,
+      "true": 4,
+      "pred": 13,
+      "correct": false,
+      "source": "crop"
+    },
+    {
+      "identity": "Kate Winslet",
+      "filename": "010_6102c83d.jpg",
+      "fold": 1,
+      "true": 6,
+      "pred": 13,
+      "correct": false,
+      "source": "crop"
+    },
+    {
+      "identity": "Leonardo DiCaprio",
+      "filename": "055_ba4ace00.jpg",
+      "fold": 1,
+      "true": 7,
+      "pred": 3,
+      "correct": false,
+      "source": "crop"
+    },
+    {
+      "identity": "Robert Downey Jr",
+      "filename": "050_7509d1bb.jpg",
+      "fold": 1,
+      "true": 11,
+      "pred": 7,
+      "correct": false,
+      "source": "crop"
+    },
+    {
+      "identity": "Will Smith",
+      "filename": "026_4f5bfb2c.jpg",
+      "fold": 1,
+      "true": 16,
+      "pred": 11,
+      "correct": false,
+      "source": "crop"
+    },
+    {
+      "identity": "Brad Pitt",
+      "filename": "076_75b9dd73.jpg",
+      "fold": 2,
+      "true": 1,
+      "pred": 16,
+      "correct": false,
+      "source": "crop"
+    },
+    {
+      "identity": "Brad Pitt",
+      "filename": "093_c4d318cd.jpg",
+      "fold": 2,
+      "true": 1,
+      "pred": 5,
+      "correct": false,
+      "source": "crop"
+    },
+    {
+      "identity": "Jennifer Lawrence",
+      "filename": "030_4f246d8f.jpg",
+      "fold": 2,
+      "true": 4,
+      "pred": 8,
+      "correct": false,
+      "source": "crop"
+    },
+    {
+      "identity": "Jennifer Lawrence",
+      "filename": "100_6882dc21.jpg",
+      "fold": 2,
+      "true": 4,
+      "pred": 10,
+      "correct": false,
+      "source": "crop"
+    },
+    {
+      "identity": "Robert Downey Jr",
+      "filename": "033_255948c8.jpg",
+      "fold": 2,
+      "true": 11,
+      "pred": 5,
+      "correct": false,
+      "source": "crop"
+    },
+    {
+      "identity": "Robert Downey Jr",
+      "filename": "066_0bdb9ac3.jpg",
+      "fold": 2,
+      "true": 11,
+      "pred": 5,
+      "correct": false,
+      "source": "crop"
+    },
+    {
+      "identity": "Will Smith",
+      "filename": "069_80468bd5.jpg",
+      "fold": 2,
+      "true": 16,
+      "pred": 2,
+      "correct": false,
+      "source": "crop"
+    },
+    {
+      "identity": "Brad Pitt",
+      "filename": "059_ef2c0ca7.jpg",
+      "fold": 3,
+      "true": 1,
+      "pred": 5,
+      "correct": false,
+      "source": "crop"
+    },
+    {
+      "identity": "Brad Pitt",
+      "filename": "100_f4b2c7a7.jpg",
+      "fold": 3,
+      "true": 1,
+      "pred": 11,
+      "correct": false,
+      "source": "crop"
+    },
+    {
+      "identity": "Johnny Depp",
+      "filename": "043_77e393de.jpg",
+      "fold": 3,
+      "true": 5,
+      "pred": 4,
+      "correct": false,
+      "source": "crop"
+    },
+    {
+      "identity": "Kate Winslet",
+      "filename": "044_c2d670fb.jpg",
+      "fold": 3,
+      "true": 6,
+      "pred": 0,
+      "correct": false,
+      "source": "crop"
+    },
+    {
+      "identity": "Kate Winslet",
+      "filename": "046_1086f507.jpg",
+      "fold": 3,
+      "true": 6,
+      "pred": 13,
+      "correct": false,
+      "source": "crop"
+    },
+    {
+      "identity": "Kate Winslet",
+      "filename": "048_453e6cb3.jpg",
+      "fold": 3,
+      "true": 6,
+      "pred": 16,
+      "correct": false,
+      "source": "crop"
+    },
+    {
+      "identity": "Natalie Portman",
+      "filename": "021_0b9bd77d.jpg",
+      "fold": 3,
+      "true": 9,
+      "pred": 0,
+      "correct": false,
+      "source": "crop"
+    },
+    {
+      "identity": "Robert Downey Jr",
+      "filename": "058_4ed85318.jpg",
+      "fold": 3,
+      "true": 11,
+      "pred": 3,
+      "correct": false,
+      "source": "crop"
+    },
+    {
+      "identity": "Sandra Bullock",
+      "filename": "083_d310d201.jpg",
+      "fold": 3,
+      "true": 12,
+      "pred": 13,
+      "correct": false,
+      "source": "crop"
+    },
+    {
+      "identity": "Angelina Jolie",
+      "filename": "075_4c504eec.jpg",
+      "fold": 4,
+      "true": 0,
+      "pred": 9,
+      "correct": false,
+      "source": "crop"
+    },
+    {
+      "identity": "Denzel Washington",
+      "filename": "052_244a9729.jpg",
+      "fold": 4,
+      "true": 2,
+      "pred": 15,
+      "correct": false,
+      "source": "crop"
+    },
+    {
+      "identity": "Denzel Washington",
+      "filename": "093_4027b1e2.jpg",
+      "fold": 4,
+      "true": 2,
+      "pred": 5,
+      "correct": false,
+      "source": "crop"
+    },
+    {
+      "identity": "Hugh Jackman",
+      "filename": "032_0e6a520a.jpg",
+      "fold": 4,
+      "true": 3,
+      "pred": 2,
+      "correct": false,
+      "source": "crop"
+    },
+    {
+      "identity": "Megan Fox",
+      "filename": "079_4e33cd00.jpg",
+      "fold": 4,
+      "true": 8,
+      "pred": 12,
+      "correct": false,
+      "source": "crop"
+    },
+    {
+      "identity": "Natalie Portman",
+      "filename": "088_c6c7b0b2.jpg",
+      "fold": 4,
+      "true": 9,
+      "pred": 6,
+      "correct": false,
+      "source": "crop"
+    },
+    {
+      "identity": "Nicole Kidman",
+      "filename": "045_dc66ee1c.jpg",
+      "fold": 4,
+      "true": 10,
+      "pred": 6,
+      "correct": false,
+      "source": "crop"
+    },
+    {
+      "identity": "Tom Hanks",
+      "filename": "098_8b5a1524.jpg",
+      "fold": 4,
+      "true": 15,
+      "pred": 11,
+      "correct": false,
+      "source": "crop"
+    },
+    {
+      "identity": "Will Smith",
+      "filename": "045_810b690c.jpg",
+      "fold": 4,
+      "true": 16,
+      "pred": 2,
+      "correct": false,
+      "source": "crop"
+    },
+    {
+      "identity": "Denzel Washington",
+      "filename": "073_2880f59c.jpg",
+      "fold": 5,
+      "true": 2,
+      "pred": 15,
+      "correct": false,
+      "source": "crop"
+    },
+    {
+      "identity": "Johnny Depp",
+      "filename": "050_6641bd32.jpg",
+      "fold": 5,
+      "true": 5,
+      "pred": 7,
+      "correct": false,
+      "source": "crop"
+    },
+    {
+      "identity": "Scarlett Johansson",
+      "filename": "036_829e603f.jpg",
+      "fold": 5,
+      "true": 13,
+      "pred": 12,
+      "correct": false,
+      "source": "crop"
+    },
+    {
+      "identity": "Tom Cruise",
+      "filename": "033_d891acbd.jpg",
+      "fold": 5,
+      "true": 14,
+      "pred": 5,
+      "correct": false,
+      "source": "crop"
+    },
+    {
+      "identity": "Angelina Jolie",
+      "filename": "090_da55509f.jpg",
+      "fold": 6,
+      "true": 0,
+      "pred": 9,
+      "correct": false,
+      "source": "crop"
+    },
+    {
+      "identity": "Jennifer Lawrence",
+      "filename": "032_bed86546.jpg",
+      "fold": 6,
+      "true": 4,
+      "pred": 9,
+      "correct": false,
+      "source": "crop"
+    },
+    {
+      "identity": "Jennifer Lawrence",
+      "filename": "066_4c979163.jpg",
+      "fold": 6,
+      "true": 4,
+      "pred": 6,
+      "correct": false,
+      "source": "crop"
+    },
+    {
+      "identity": "Johnny Depp",
+      "filename": "083_16b5e7ab.jpg",
+      "fold": 6,
+      "true": 5,
+      "pred": 11,
+      "correct": false,
+      "source": "crop"
+    },
+    {
+      "identity": "Leonardo DiCaprio",
+      "filename": "048_f82caaae.jpg",
+      "fold": 6,
+      "true": 7,
+      "pred": 3,
+      "correct": false,
+      "source": "crop"
+    },
+    {
+      "identity": "Leonardo DiCaprio",
+      "filename": "078_a7fd9be1.jpg",
+      "fold": 6,
+      "true": 7,
+      "pred": 16,
+      "correct": false,
+      "source": "crop"
+    },
+    {
+      "identity": "Scarlett Johansson",
+      "filename": "096_9d0cd927.jpg",
+      "fold": 6,
+      "true": 13,
+      "pred": 6,
+      "correct": false,
+      "source": "crop"
+    },
+    {
+      "identity": "Tom Hanks",
+      "filename": "059_c7c906d9.jpg",
+      "fold": 6,
+      "true": 15,
+      "pred": 2,
+      "correct": false,
+      "source": "crop"
+    },
+    {
+      "identity": "Will Smith",
+      "filename": "079_8575a4bc.jpg",
+      "fold": 6,
+      "true": 16,
+      "pred": 9,
+      "correct": false,
+      "source": "crop"
+    },
+    {
+      "identity": "Johnny Depp",
+      "filename": "021_9ab18f1b.jpg",
+      "fold": 7,
+      "true": 5,
+      "pred": 1,
+      "correct": false,
+      "source": "crop"
+    },
+    {
+      "identity": "Robert Downey Jr",
+      "filename": "031_f2f3733f.jpg",
+      "fold": 7,
+      "true": 11,
+      "pred": 15,
+      "correct": false,
+      "source": "crop"
+    },
+    {
+      "identity": "Robert Downey Jr",
+      "filename": "074_a86aab43.jpg",
+      "fold": 7,
+      "true": 11,
+      "pred": 1,
+      "correct": false,
+      "source": "crop"
+    },
+    {
+      "identity": "Tom Hanks",
+      "filename": "042_1276f85d.jpg",
+      "fold": 7,
+      "true": 15,
+      "pred": 3,
+      "correct": false,
+      "source": "crop"
+    },
+    {
+      "identity": "Angelina Jolie",
+      "filename": "095_0be163a1.jpg",
+      "fold": 8,
+      "true": 0,
+      "pred": 10,
+      "correct": false,
+      "source": "crop"
+    },
+    {
+      "identity": "Hugh Jackman",
+      "filename": "094_bcb2a8f4.jpg",
+      "fold": 8,
+      "true": 3,
+      "pred": 2,
+      "correct": false,
+      "source": "crop"
+    },
+    {
+      "identity": "Kate Winslet",
+      "filename": "095_8ffab61d.jpg",
+      "fold": 8,
+      "true": 6,
+      "pred": 9,
+      "correct": false,
+      "source": "crop"
+    },
+    {
+      "identity": "Megan Fox",
+      "filename": "016_bd51d057.jpg",
+      "fold": 8,
+      "true": 8,
+      "pred": 12,
+      "correct": false,
+      "source": "crop"
+    },
+    {
+      "identity": "Megan Fox",
+      "filename": "041_139bb2a5.jpg",
+      "fold": 8,
+      "true": 8,
+      "pred": 10,
+      "correct": false,
+      "source": "crop"
+    },
+    {
+      "identity": "Natalie Portman",
+      "filename": "038_4930b73f.jpg",
+      "fold": 8,
+      "true": 9,
+      "pred": 13,
+      "correct": false,
+      "source": "crop"
+    },
+    {
+      "identity": "Scarlett Johansson",
+      "filename": "060_003a8f0c.jpg",
+      "fold": 8,
+      "true": 13,
+      "pred": 9,
+      "correct": false,
+      "source": "crop"
+    },
+    {
+      "identity": "Tom Hanks",
+      "filename": "100_b712e7ca.jpg",
+      "fold": 8,
+      "true": 15,
+      "pred": 11,
+      "correct": false,
+      "source": "crop"
+    },
+    {
+      "identity": "Denzel Washington",
+      "filename": "024_54153da7.jpg",
+      "fold": 9,
+      "true": 2,
+      "pred": 16,
+      "correct": false,
+      "source": "crop"
+    },
+    {
+      "identity": "Denzel Washington",
+      "filename": "053_4f937ab4.jpg",
+      "fold": 9,
+      "true": 2,
+      "pred": 16,
+      "correct": false,
+      "source": "crop"
+    },
+    {
+      "identity": "Johnny Depp",
+      "filename": "084_3dcf601a.jpg",
+      "fold": 9,
+      "true": 5,
+      "pred": 1,
+      "correct": false,
+      "source": "crop"
+    },
+    {
+      "identity": "Kate Winslet",
+      "filename": "038_74aabb03.jpg",
+      "fold": 9,
+      "true": 6,
+      "pred": 12,
+      "correct": false,
+      "source": "crop"
+    },
+    {
+      "identity": "Kate Winslet",
+      "filename": "050_0c20b215.jpg",
+      "fold": 9,
+      "true": 6,
+      "pred": 12,
+      "correct": false,
+      "source": "crop"
+    },
+    {
+      "identity": "Natalie Portman",
+      "filename": "099_75aa5bcc.jpg",
+      "fold": 9,
+      "true": 9,
+      "pred": 13,
+      "correct": false,
+      "source": "crop"
+    },
+    {
+      "identity": "Robert Downey Jr",
+      "filename": "076_318ed434.jpg",
+      "fold": 9,
+      "true": 11,
+      "pred": 14,
+      "correct": false,
+      "source": "crop"
+    },
+    {
+      "identity": "Scarlett Johansson",
+      "filename": "055_f6e1bf43.jpg",
+      "fold": 9,
+      "true": 13,
+      "pred": 9,
+      "correct": false,
+      "source": "crop"
+    },
+    {
+      "identity": "Will Smith",
+      "filename": "063_46f560ca.jpg",
+      "fold": 9,
+      "true": 16,
+      "pred": 1,
+      "correct": false,
+      "source": "crop"
+    }
+  ]
+}

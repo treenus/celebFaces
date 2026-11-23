@@ -1,0 +1,113 @@
+{
+  "fold": 0,
+  "seed": 402,
+  "method": "CE + batch-hard triplet (FaceNet-style), train-only mining",
+  "triplet_margin": 0.2,
+  "triplet_weight": 0.5,
+  "epochs": 4,
+  "lr": 0.0001,
+  "stage1_test_acc": 0.9529411792755127,
+  "best_test_acc": 0.9529411792755127,
+  "improved": false,
+  "mined_hard_pairs": [
+    [
+      "Megan Fox",
+      "Sandra Bullock"
+    ],
+    [
+      "Kate Winslet",
+      "Scarlett Johansson"
+    ],
+    [
+      "Denzel Washington",
+      "Will Smith"
+    ],
+    [
+      "Robert Downey Jr",
+      "Tom Hanks"
+    ],
+    [
+      "Kate Winslet",
+      "Megan Fox"
+    ],
+    [
+      "Natalie Portman",
+      "Scarlett Johansson"
+    ],
+    [
+      "Brad Pitt",
+      "Tom Hanks"
+    ],
+    [
+      "Hugh Jackman",
+      "Tom Hanks"
+    ]
+  ],
+  "mining_diag": {
+    "n_hard_samples": 200,
+    "pair_counts": {
+      "8-12": 74,
+      "6-13": 32,
+      "2-16": 23,
+      "11-15": 12,
+      "6-8": 9,
+      "9-13": 9,
+      "1-15": 7,
+      "3-15": 5,
+      "7-11": 4,
+      "3-11": 4,
+      "0-12": 4,
+      "11-16": 3,
+      "3-7": 2,
+      "6-12": 2,
+      "5-6": 2
+    },
+    "hardest_sim_top10": [
+      0.9184,
+      0.9184,
+      0.9184,
+      0.9162,
+      0.9162,
+      0.9116,
+      0.9096,
+      0.9088,
+      0.9088,
+      0.9077
+    ]
+  },
+  "elapsed_sec": 184.5,
+  "history": [
+    {
+      "epoch": 1,
+      "loss": 0.024037006261580167,
+      "ce": 0.021257359841640327,
+      "triplet": 0.005559292671449007,
+      "train_acc": 0.9973404255319149,
+      "test_acc": 0.9352940917015076
+    },
+    {
+      "epoch": 2,
+      "loss": 0.02281970835905126,
+      "ce": 0.01860236029754928,
+      "triplet": 0.008434695479004307,
+      "train_acc": 0.9980053191489362,
+      "test_acc": 0.9470587968826294
+    },
+    {
+      "epoch": 3,
+      "loss": 0.01722319495983105,
+      "ce": 0.015524999471381307,
+      "triplet": 0.003396390887730299,
+      "train_acc": 0.9960106382978723,
+      "test_acc": 0.9529411792755127
+    },
+    {
+      "epoch": 4,
+      "loss": 0.01697958343999183,
+      "ce": 0.014992203107698167,
+      "triplet": 0.003974760347541342,
+      "train_acc": 0.9966755319148937,
+      "test_acc": 0.9470587968826294
+    }
+  ]
+}

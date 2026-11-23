@@ -10,8 +10,18 @@ yolo stinks at this. it seems to perform best on images containing multiple clas
 
 large caveat to haar classifier, works best with forward facing samples under consistent lighting, high fp/fn rate on side-angle or tilted samples, may require stronger fallback than yolov3 to catch all misses-avoiding training a raw image. 
 
+YuNet caught everything that Haar Classifier missed, including the fallbacks that used YOLOv3 (all two of them), so in practice only the YuNet Crops will be trained on, but YOLOv3 stays in the pipeline in the case the dataset ever grows (with varied subjects). 
+
+training on M2 Mac while on low power mode halves it/s while training, wall power is one million percent recommended to avoid throttling. 
+
 ## Improvement
-upgrade to later yolo model? 
+upgrade to later yolo model? -probably not needed due to data style
+
+Haar is maybe the last limiting factor, since yolo isn't catching many things it misses. Will test openCV YuNet on misses, perhaps dropping v3 down the hierarchy further. 
+
+Adding YuNet into pipeline as a more pose-robust detector (chip generator)
+
+going to try hard-negative mining, need to cite a few papers as a result. 
 
 topics for final: 
 biometric traits-what are they (5)

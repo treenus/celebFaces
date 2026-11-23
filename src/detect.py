@@ -5,12 +5,15 @@ Measured on this dataset (85-image sample, 5 per identity):
     head-and-shoulders crops, and YOLO needs a substantial body to fire.
   - Haar frontal-face cascade hits ~88% on the same sample.
 
-So the v1 pipeline is:
+So the pipeline is:
   1. Haar cascade face box (largest face), expanded by MARGIN.
-  2. If Haar misses -> YOLOv3-tiny person box (COCO class 0), expanded.
-     (Person boxes can be torso-only on group shots, so they're a last
-     resort before the full image — still better than background.)
-  3. If both miss -> write nothing; `src.dataset.source_of()` falls back
+  2. If Haar misses -> YuNet (cv2.FaceDetectorYN, pose-robust ONNX face
+     detector). Measured: YuNet recovers 96/96 images that Haar+YOLO
+     missed or cropped as torso-only (conf 0.9+).
+  3. If YuNet misses -> YOLOv3-tiny person box (COCO class 0), expanded.
+     Kept as a last-resort safety net (and satisfies the YOLOv3 paper
+     integration); in practice YuNet catches everything Haar misses.
+  4. If all miss -> write nothing; `src.dataset.source_of()` falls back
      to the full raw image for that file.
 
 A per-image report is written to results/detection_report.json so every
@@ -46,6 +49,7 @@ from .utils import (
 WEIGHTS_DIR = PROJECT_ROOT / "weights"
 CFG_PATH = WEIGHTS_DIR / "yolov3-tiny.cfg"
 WEIGHTS_PATH = WEIGHTS_DIR / "yolov3-tiny.weights"
+YUNET_PATH = WEIGHTS_DIR / "face_detection_yunet_2023mar.onnx"
 
 PERSON_CLASS_ID = 0     # COCO class 0 = person
 INPUT_SIZE = 416        # YOLOv3-tiny default
@@ -81,6 +85,27 @@ def detect_face_haar(cascade: cv2.CascadeClassifier, img_bgr: np.ndarray) -> tup
         return None
     x, y, w, h = max(faces, key=lambda f: f[2] * f[3])
     return int(x), int(y), int(w), int(h)
+
+
+def load_yunet() -> cv2.FaceDetectorYN:
+    if not YUNET_PATH.exists():
+        raise FileNotFoundError(
+            f"YuNet model not found at {YUNET_PATH}. Download "
+            "face_detection_yunet_2023mar.onnx from opencv/opencv_zoo."
+        )
+    return cv2.FaceDetectorYN.create(str(YUNET_PATH), "", (320, 320), 0.7, 0.3, 5000)
+
+
+def detect_face_yunet(det: cv2.FaceDetectorYN, img_bgr: np.ndarray) -> tuple[float, tuple[int, int, int, int]] | None:
+    """Largest YuNet face: (conf, (x, y, w, h)), or None. Pose-robust."""
+    h, w = img_bgr.shape[:2]
+    det.setInputSize((w, h))
+    _, faces = det.detect(img_bgr)
+    if faces is None or len(faces) == 0:
+        return None
+    best = max(faces, key=lambda f: f[2] * f[3])
+    x, y, bw, bh = (int(v) for v in best[:4])
+    return float(best[-1]), (x, y, bw, bh)
 
 
 def detect_persons(net: cv2.dnn_Net, img_bgr: np.ndarray) -> list[tuple[float, tuple[int, int, int, int]]]:
@@ -134,6 +159,7 @@ def run(force: bool = False) -> dict:
     ensure_dirs()
     net = load_net()
     haar = load_haar()
+    yunet = load_yunet()
 
     report: dict[str, dict] = {}
     stats: Counter = Counter()
@@ -156,11 +182,17 @@ def run(force: bool = False) -> dict:
             report[key] = {"status": "unreadable"}
             continue
 
-        # Stage 1: Haar face box (precise). Stage 2: YOLO person box
-        # (coarse, may be torso-only). Else: full-image fallback.
+        # Stage 1: Haar (fast, frontal). Stage 2: YuNet (pose-robust).
+        # Stage 3: YOLO person box (last resort). Else: full-image fallback.
         box = detect_face_haar(haar, img)
         source = "haar"
         extra: dict = {}
+        if box is None:
+            yn = detect_face_yunet(yunet, img)
+            if yn is not None:
+                conf, box = yn
+                source = "yunet"
+                extra = {"conf": round(conf, 4)}
         if box is None:
             dets = detect_persons(net, img)
             if dets:
@@ -196,7 +228,7 @@ def run(force: bool = False) -> dict:
     total = len(all_images)
     n_miss = stats["miss"] + stats["unreadable"] + stats["write_failed"]
     summary = {
-        "detector": "haar face box -> yolov3-tiny person fallback (margin=0.20)",
+        "detector": "haar -> yunet -> yolov3-tiny person (margin=0.20)",
         "conf_threshold": CONF_THRESHOLD,
         "nms_threshold": NMS_THRESHOLD,
         "total_images": total,
