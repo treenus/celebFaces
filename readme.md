@@ -21,7 +21,9 @@ Haar is maybe the last limiting factor, since yolo isn't catching many things it
 
 Adding YuNet into pipeline as a more pose-robust detector (chip generator)
 
-going to try hard-negative mining, need to cite a few papers as a result. 
+going to try hard-negative mining, need to cite a few papers as a result. - yielded maybe a percent improvement overall
+
+secret surprise will be to use pretrained arcface embeddings, put on the last slide just to contrast the difference. 
 
 topics for final: 
 biometric traits-what are they (5)

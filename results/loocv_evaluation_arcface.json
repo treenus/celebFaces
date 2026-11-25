@@ -1,0 +1,476 @@
+{
+  "model": "insightface buffalo_l (ArcFace ResNet50) + cosine kNN",
+  "k": 5,
+  "mean_fold_acc": 0.9988235294117647,
+  "pooled_acc": 0.9988235294117647,
+  "fold_accs": [
+    1.0,
+    1.0,
+    1.0,
+    0.9941176470588236,
+    0.9941176470588236,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0
+  ],
+  "identities": [
+    "Angelina Jolie",
+    "Brad Pitt",
+    "Denzel Washington",
+    "Hugh Jackman",
+    "Jennifer Lawrence",
+    "Johnny Depp",
+    "Kate Winslet",
+    "Leonardo DiCaprio",
+    "Megan Fox",
+    "Natalie Portman",
+    "Nicole Kidman",
+    "Robert Downey Jr",
+    "Sandra Bullock",
+    "Scarlett Johansson",
+    "Tom Cruise",
+    "Tom Hanks",
+    "Will Smith"
+  ],
+  "confusion_matrix": [
+    [
+      100,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      100,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      100,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      100,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      100,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      100,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      100,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      100,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      99,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      100,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      100,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      100,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      100,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      100,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      99,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      100,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      100
+    ]
+  ],
+  "analysis": {
+    "per_identity": {
+      "Angelina Jolie": {
+        "recall": 1.0,
+        "errors": 0
+      },
+      "Brad Pitt": {
+        "recall": 1.0,
+        "errors": 0
+      },
+      "Denzel Washington": {
+        "recall": 1.0,
+        "errors": 0
+      },
+      "Hugh Jackman": {
+        "recall": 1.0,
+        "errors": 0
+      },
+      "Jennifer Lawrence": {
+        "recall": 1.0,
+        "errors": 0
+      },
+      "Johnny Depp": {
+        "recall": 1.0,
+        "errors": 0
+      },
+      "Kate Winslet": {
+        "recall": 1.0,
+        "errors": 0
+      },
+      "Leonardo DiCaprio": {
+        "recall": 1.0,
+        "errors": 0
+      },
+      "Megan Fox": {
+        "recall": 0.99,
+        "errors": 1
+      },
+      "Natalie Portman": {
+        "recall": 1.0,
+        "errors": 0
+      },
+      "Nicole Kidman": {
+        "recall": 1.0,
+        "errors": 0
+      },
+      "Robert Downey Jr": {
+        "recall": 1.0,
+        "errors": 0
+      },
+      "Sandra Bullock": {
+        "recall": 1.0,
+        "errors": 0
+      },
+      "Scarlett Johansson": {
+        "recall": 1.0,
+        "errors": 0
+      },
+      "Tom Cruise": {
+        "recall": 0.99,
+        "errors": 1
+      },
+      "Tom Hanks": {
+        "recall": 1.0,
+        "errors": 0
+      },
+      "Will Smith": {
+        "recall": 1.0,
+        "errors": 0
+      }
+    },
+    "top_confused_pairs": [
+      {
+        "true": "Megan Fox",
+        "pred": "Angelina Jolie",
+        "count": 1
+      },
+      {
+        "true": "Tom Cruise",
+        "pred": "Robert Downey Jr",
+        "count": 1
+      }
+    ],
+    "detection_buckets": {
+      "cached": {
+        "total": 1604,
+        "errors": 2,
+        "error_rate": 0.0012468827930174563
+      },
+      "yunet": {
+        "total": 96,
+        "errors": 0,
+        "error_rate": 0.0
+      }
+    }
+  },
+  "errors": [
+    {
+      "identity": "Tom Cruise",
+      "filename": "090_8f4eb0e6.jpg",
+      "fold": 3,
+      "true": 14,
+      "pred": 11,
+      "correct": false
+    },
+    {
+      "identity": "Megan Fox",
+      "filename": "012_d461a2b5.jpg",
+      "fold": 4,
+      "true": 8,
+      "pred": 0,
+      "correct": false
+    }
+  ]
+}

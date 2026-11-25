@@ -15,3 +15,7 @@ opencv-python>=4.8,<5
 
 # Image handling
 Pillow
+
+# Reference route: pretrained ArcFace embeddings (src/embeddings.py)
+insightface
+onnxruntime
